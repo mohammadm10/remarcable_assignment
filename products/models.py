@@ -2,6 +2,9 @@ from django.db import models
     
 class Category(models.Model):
 
+    class Meta:
+        verbose_name_plural = "Categories"
+
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     active = models.BooleanField(default=True)
@@ -13,6 +16,9 @@ class Category(models.Model):
     
 class Tag(models.Model):
 
+    class Meta:
+        verbose_name_plural = "Tags"
+
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     active = models.BooleanField(default=True)
@@ -23,6 +29,9 @@ class Tag(models.Model):
         return self.name
     
 class Product(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Products"
 
     name = models.CharField(max_length=255)
     sku = models.CharField(max_length=255, unique=True)
