@@ -45,6 +45,7 @@ def product_list(request):
         'products': all_products,
         'categories': all_categories,
         'tags': all_tags,
+        'selected_tags': selected_tag_ids,
     }
 
     return HttpResponse(template.render(context, request))

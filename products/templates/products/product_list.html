@@ -9,21 +9,24 @@
         <select name="category">
             <option value="">All Categories</option>
             {% for cat in categories %}
-                <option value="{{ cat.id }}" value="">
+            <!--Reference: https://stackoverflow.com/questions/4831306/need-to-convert-a-string-to-int-in-a-django-template-->
+                <option value="{{ cat.id }}" {% if cat.id == request.GET.category|add:"0" %}selected{% endif %}>
                     {{ cat.name }}
                 </option>
             {% endfor %}
         </select>
         
         <label for="tags">Filter by Tags:</label>
-        <select name="tag" multiple="true">
+        <div>
+            <strong>Filter by Tags:</strong>
             {% for tag in tags %}
-                <option value="{{ tag.id }}" >
+                <label>
+                    <input type="checkbox" name="tag" value="{{ tag.id }}" 
+                        {% if tag.id|stringformat:"i" in selected_tags %}checked{% endif %}>
                     {{ tag.name }}
-                </option>
+                </label>
             {% endfor %}
-        </select>
-
+        </div>
         <button type="submit">Filter</button>
     </form>
 
