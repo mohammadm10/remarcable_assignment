@@ -8,14 +8,23 @@ A template was created to allow the user to search for products on the frontend.
 
 ### Setup and installation
 
-1. Clone the repository directly from GitHub
+1. Clone the repository directly from GitHub\
 ```git clone git@github.com:mohammadm10/remarcable_assignment.git```
-2. Open the folder
+2. Open the folder\
 ```cd remarcable_assignment```
-3. Initialize the database
+3. Set up Virtual Environment\
+Linux:\
+```python3 -m venv venv```\
+```source venv/bin/activate```\
+Windows:\
+```python -m venv venv```\
+```.\venv\Scripts\activate```\
+4. Install dependencies\
+```pip install -r requirements.txt```
+5. Initialize the database\
 ```python manage.py migrate```
-4. Load the sample data
+6. Load the sample data\
 ```python manage.py loaddata db_dump.json```
-5. Run the application
+7. Run the application\
 ```python manage.py runserver```
-6. Open ```http://127.0.0.1:8000/products/``` in your browser 
+8. Open ```http://127.0.0.1:8000/products/``` in your browser 
