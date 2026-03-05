@@ -20,7 +20,7 @@ def apply_product_filters(products, search_query, category_id, tag_id):
 
     if tag_id:
         # Use in operator to filter products that have any of the selected tags
-        products = products.filter(tags__id__in=tag_id)
+        products = products.filter(tags__id__in=tag_id).distinct() # If a product has multiple of the selected tags, we only want to show it once
 
     return products
 
