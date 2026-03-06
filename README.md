@@ -28,3 +28,5 @@ Windows:\
 7. Run the application\
 ```python manage.py runserver```
 8. Open ```http://127.0.0.1:8000/products/``` in your browser 
+9. Access the Admin Panel ```http://127.0.0.1:8000/admin/```\
+To log in you will need to create a superuser account. This can be done using the following command: ```python manage.py createsuperuser```
