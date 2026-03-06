@@ -34,7 +34,7 @@ def get_all_static_data():
     """
     Retrieve all products, categories, and tags from the database.
     """
-    p = Product.objects.all()
+    p = Product.objects.filter(active=True) # Only show active products
     c = Category.objects.all()
     t = Tag.objects.all()
 
