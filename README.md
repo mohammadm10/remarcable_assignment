@@ -18,7 +18,7 @@ Linux:\
 ```source venv/bin/activate```\
 Windows:\
 ```python -m venv venv```\
-```.\venv\Scripts\activate```\
+```.\venv\Scripts\activate```
 4. Install dependencies\
 ```pip install -r requirements.txt```
 5. Initialize the database\
